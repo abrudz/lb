@@ -30,7 +30,7 @@ let lbh='';for(let i=0;i<lbs.length;i++){
 let d=document,el=d.createElement('div');el.innerHTML=
 `<div class=ngn_lb>${lbh}</div>
  <style>
-  @font-face{font-family:"Apl385 Unicode";src:url(https://ngn.github.com/ngn/apl/web/Apl385.woff)format('woff');}
+  @font-face{font-family:"Apl385 Unicode";src:url(https://abrudz.github.io/lb/Apl385.woff)format('woff');}
  </style>
  <style>
   body{padding-top:24px!important}
