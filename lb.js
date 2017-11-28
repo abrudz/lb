@@ -2,21 +2,20 @@
 let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"]/g,c=>hc[c]) //html chars and escape fn
 ,tcs='<-←xx×:-÷*o⍟[-⌹oo○ff⌈FF⌈ll⌊LL⌊tt⊥TT⊤-|⊣|-⊢~~≈=/≠<=≤>=≥==≡=-≢vv∨^^∧^~⍲v~⍱^|↑v|↓<<⊂>>⊃[|⌷A|⍋V|⍒ii⍳ee∊e-⍷'+
 'uu∪nn∩/-⌿\\-⍀,-⍪rr⍴pp⍴o|⌽o-⊖o\\⍉..¨~:⍨*:⍣o.∘[\'⍞[]⎕[:⍠[=⌸ot⍎oT⍕<>⋄on⍝aa⍺ww⍵a-⍶w-⍹VV∇--¯88∞0~⍬V~⍫//↗[/⍁'
-,lbs=['←assign',' ','+conjugate;add','-negate;subtract','×signum;multiply','÷reciprocal;divide','*exp;power','⍟ln;log',
-'⌹matrix inverse;matrix divide','○pi;circular','!factorial;binomial','?roll;deal','|magnitude;residue',
-'⌈ceiling;max','⌊floor;min','⊥decode','⊤encode','⊣left','⊢right','=equals','≈approx','≠not equals',
-'≤lesser or equal to','<less than','>greater than','≥greater or equal to','≡depth;match','≢tally;not match','∨or',
-'∧and','⍲nand','⍱nor','↑mix;take','↓split;drop','⊂enclose','⊃first;pick','⌷index','⍋grade up',
-'⍒grade down','⍳indices;index of','∊flatten;member of','⍷find','∪unique;union','∩intersection','~not;without',
-'/reduce;replicate','\\scan','⌿1st axis reduce;1st axis replicate','⍀1st axis scan',',enlist;catenate',
-'⍪table;1st axis catenate','⍴shape of;reshape','⌽reverse;rotate','⊖1st axis reverse;1st axis rotate',
-'⍉transpose;reorder axes','¨each','⍨selfie;commute','⍣power operator','.inner product',
-'∘compose','⍞stdin/stdout','⎕eval\'ed stdin/stdout','⍠combine monadic-dyadic fns',
-'⌸key operator','⍎execute','⍕format','⋄statement separator','⍝comment','⍺left argument','⍵right argument',
-'⍶left operand','⍹right operand','∇recursion','¯negative','∞infinity','⍬empty numeric vector',
-'⍫"return" reified as a function','↗throw','⍁identity element operator']
-,bqk=' =1234567890-qwertyuiop\\asdfghjk×l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/×/g,'')
-,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢ ⍺⌈⌊_∇∆∘\'⎕⍎⍕ ⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰⍵⍷⍷⍨↑↓⍸⍥⍣⊣⍺⌈⌊_⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/ /g,'')
+,lbs=['←assign',' ','+conjugate\nplus','-negate\nminus','×direction\ntimes','÷reciprocal\ndivide','*exponential\npower','⍟natural logarithm\logarithm',
+'⌹matrix inverse\nmatrix divide','○pi times\ncircular','!factorial\nbinomial','?roll\ndeal',' ','|magnitude\nresidue',
+'⌈ceiling\nmaximum','⌊floor\nminimum','⊥decode','⊤encode','⊣same\nleft','⊢same\nright',' ','=equal','≠not equal',
+'≤less than or equal to','<less than','>greater than','≥greater than or equal to','≡depth\nmatch','≢tally\nnot match',' ','∨greatest common divisor/or',
+'∧leat common multiple/and','⍲nand','⍱nor',' ','↑mix\ntake','↓split\ndrop','⊂enclose\npartioned enclose','⊃first\npick','⊆nest\npartition\n','⌷index','⍋grade up\ngrade up',
+'⍒grade down\ngrade down','⍳index\nindex of','⍸where\ninterval index','∊enlist\nmembership','⍷find','∪unique\nunion','∩intersection','~not\nwithout',' ',
+'/replicate\nReduce','\\expand\nScan','⌿replicate first\nReduce first','⍀expand first\nScan first',' ',',enlist\ncatenate/laminate',
+'⍪table\ncatenate first/laminate','⍴shape\nreshape','⌽reverse\nrotate','⊖reverse first\nrotate first',
+'⍉transpose\nreorder axes',' ','¨Each','⍨Selfie\nSwap','⍣Repeat','.nInner product\nOuter product (∘.)',
+'∘Curry\nCompose\nOuter product (∘.)','⍤Rank','@At',' ','⍞stdin\nstderr','⎕eval\'ed stdin\nstdout','⍠Variant',
+'⌸Index key\nKey\n','⌺Stencil','⌶I-beam','⍎execute','⍕format',' ','⋄statement separator','⍝comment','→abort\nbranch','⍵right argument','⍺left argument',
+'∇recursion','&Spawn',' ','¯negative','⍬empty numeric vector']
+,bqk=' =1234567890-qwertyuiop\\asdfghjk∙l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/∙/g,'')
+,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰⍵⍷⍷⍨↑↓⍸⍥⍣⊣⍺⌈⌊_⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
 ,tc={},bqc={} //tab completions and ` completions
 for(let i=0;i<bqk.length;i++)bqc[bqk[i]]=bqv[i]
 for(let i=0;i<tcs.length;i+=3)tc[tcs[i]+tcs[i+1]]=tcs[i+2]
@@ -34,12 +33,11 @@ let d=document,el=d.createElement('div');el.innerHTML=
  </style>
  <style>
   body{padding-top:24px!important}
-  .ngn_lb{position:fixed;top:0;left:0;right:0;height:24px;line-height:24px;background-color:#eee;color:#000;
-    cursor:default;overflow:hidden;font-family:"APL385 Unicode",monospace;white-space:pre;wrap:no-wrap;
-    border-bottom:solid #ccc 1px;z-index:2147483647}
+  .ngn_lb{position:fixed;top:0;left:0;right:0;line-height:24px;background-color:buttonface;color:#000;
+    cursor:default;font-family:"APL385 Unicode","DejaVu Sans Mono",monospace;
+    border-bottom:solid buttonshadow 1px;z-index:2147483647}
   .ngn_lb b{cursor:pointer;padding:0 1px;font-weight:normal}
-  .ngn_lb b:hover{background-color:#008;color:#fff}
-  .ngn_bq .ngn_lb{color:#c00}
+  .ngn_lb b:hover,.ngn_bq .ngn_lb{background-color:buttonshadow;color:#fff}
  </style>`
 d.body.appendChild(el)
 let t,lb=el.firstChild,bqm=0 //t:textarea, lb:language bar, bqm:backquote mode
