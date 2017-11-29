@@ -1,8 +1,8 @@
 ;(_=>{
 let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"]/g,c=>hc[c]) //html chars and escape fn
-,tcs='<-←-<←xx×:-÷-:÷*O⍟O*⍟[-⌹-]⌹OO○77⌈FF⌈ll⌊LL⌊|_⊥_|⊥TT⊤-|⊣|-⊢=/≠/=≠<=≤<_≤>=≥>_≥==≡=_≡/_≢_/≢vv∨^^∧^~⍲~^⍲v~⍱~v⍱^|↑|^↑v|↓|v↓((⊂(_⊆_(⊆))⊃[|⌷|]⌷A|⍋|A⍋V|⍒|V⍒ii⍳i_⍸_i⍸ee∊e_⍷_e⍷'+
-'uu∪UU∪nn∩/-⌿-/⌿\\-⍀-\\⍀,-⍪-,⍪rr⍴pp⍴O|⌽|O⌽O-⊖-O⊖O\\⍉\\O⍉::¨~:⍨:~⍨*:⍣:*⍣oo∘o:⍤:o⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎_o⍎oT⍕To⍕<>⋄on⍝no⍝aa⍺ww⍵VV∇--¯0~⍬~0⍬'+
-'^-∆-^∆^=⍙=^⍙[?⍰?]⍰:V⍢V:⍢||∥ox¤xo¤)_⊇_)⊇O:⍥:O⍥V~⍫~V⍫'
+,tcs='<-←xx×:-÷*O⍟[-⌹-]⌹OO○77⌈FF⌈ll⌊LL⌊|_⊥TT⊤-|⊣|-⊢=/≠<=≤<_≤>=≥>_≥==≡=_≡/_≢vv∨^^∧^~⍲v~⍱^|↑v|↓((⊂(_⊆))⊃[|⌷|]⌷A|⍋V|⍒ii⍳i_⍸ee∊e_⍷'+
+'uu∪UU∪nn∩/-⌿\\-⍀,-⍪rr⍴pp⍴O|⌽O-⊖O\\⍉::¨~:⍨*:⍣oo∘o:⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎oT⍕<>⋄on⍝aa⍺ww⍵VV∇--¯0~⍬'+
+'^-∆^=⍙[?⍰?]⍰:V⍢||∥ox¤)_⊇_)⊇O:⍥:O⍥V~⍫'
 ,lbs=['←ASSIGN',' ','+conjugate\nplus','-negate\nminus','×direction\ntimes','÷reciprocal\ndivide','*exponential\npower','⍟natural logarithm\nlogarithm',
 '⌹matrix inverse\nmatrix divide','○pi times\ncircular','!factorial\nbinomial','?roll\ndeal',' ','|magnitude\nresidue',
 '⌈ceiling\nmaximum','⌊floor\nminimum','⊥decode','⊤encode','⊣same\nleft','⊢same\nright',' ','=equal','≠not equal',
