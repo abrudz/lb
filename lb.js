@@ -1,7 +1,7 @@
 ;(_=>{
 let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"]/g,c=>hc[c]) //html chars and escape fn
 ,tcs='<-←-<←xx×:-÷-:÷*O⍟O*⍟[-⌹-]⌹OO○77⌈FF⌈ll⌊LL⌊|_⊥_|⊥TT⊤-|⊣|-⊢=/≠/=≠<=≤<_≤>=≥>_≥==≡=_≡/_≢_/≢vv∨^^∧^~⍲~^⍲v~⍱~v⍱^|↑|^↑v|↓|v↓((⊂(_⊆_(⊆))⊃[|⌷|]⌷A|⍋|A⍋V|⍒|V⍒ii⍳i_⍸_i⍸ee∊e_⍷_e⍷'+
-'uu∪UU∪nn∩/-⌿-/⌿\\-⍀-\\⍀,-⍪-,⍪rr⍴pp⍴O|⌽|O⌽O-⊖-O⊖O\\⍉\\O⍉::¨~:⍨:~⍨*:⍣:*⍣oo∘o:⍤:o⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎_o⍎oT⍕To⍕<>⋄on⍝no⍝aa⍺ww⍵VV∇--¯0~⍬~0⍬'
+'uu∪UU∪nn∩/-⌿-/⌿\\-⍀-\\⍀,-⍪-,⍪rr⍴pp⍴O|⌽|O⌽O-⊖-O⊖O\\⍉\\O⍉::¨~:⍨:~⍨*:⍣:*⍣oo∘o:⍤:o⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎_o⍎oT⍕To⍕<>⋄on⍝no⍝aa⍺ww⍵VV∇--¯0~⍬~0⍬[?⍰?]⍰:V⍢V:⍢||∥ox¤xo¤)_⊇_)⊇O:⍥:O⍥V~⍫~V⍫'
 ,lbs=['←ASSIGN',' ','+conjugate\nplus','-negate\nminus','×direction\ntimes','÷reciprocal\ndivide','*exponential\npower','⍟natural logarithm\nlogarithm',
 '⌹matrix inverse\nmatrix divide','○pi times\ncircular','!factorial\nbinomial','?roll\ndeal',' ','|magnitude\nresidue',
 '⌈ceiling\nmaximum','⌊floor\nminimum','⊥decode','⊤encode','⊣same\nleft','⊢same\nright',' ','=equal','≠not equal',
@@ -10,12 +10,12 @@ let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"
 '⍒grade down\ngrade down','⍳indices\nindices of','⍸where\ninterval index','∊enlist\nmember of','⍷find','∪unique\nunion','∩intersection','~not\nwithout',' ',
 '/replicate\nReduce','\\expand\nScan','⌿replicate first\nReduce First','⍀expand first\nScan First',' ',',enlist\ncatenate/laminate',
 '⍪table\ncatenate first/laminate','⍴shape\nreshape','⌽reverse\nrotate','⊖reverse first\nrotate first',
-'⍉transpose\nreorder axes',' ','¨Each','⍨Selfie\nSwap','⍣Repeat','.nInner Product\nOuter Product (∘.)',
-'∘Curry\nCompose\nOuter product (∘.)','⍤Rank','@At',' ','⍞STDIN\nSTDERR','⎕EVALUATED STDIN\nSTDOUT','⍠Variant',
-'⌸Index Key\nKey\n','⌺Stencil','⌶I-beam','⍎execute','⍕format',' ','⋄STATEMENT SEPARATOR','⍝COMMENT','→ABORT\nBRANCH','⍵RIGHT ARGUMENT','⍺LEFT ARGUMENT',
+'⍉transpose\nreorder axes',' ','¨Each','⍨Selfie\nSwap','⍣Repeat','.Outer Product (∘.)\nInner Product',
+'∘Outer product (∘.)\nCurry\nCompose','⍤Rank','@At',' ','⍞STDIN\nSTDERR','⎕EVALUATED STDIN\nSTDOUT','⍠Variant',
+'⌸Index Key\nKey\n','⌺Stencil','⌶I-Beam','⍎execute','⍕format',' ','⋄STATEMENT SEPARATOR','⍝COMMENT','→ABORT\nBRANCH','⍵RIGHT ARGUMENT','⍺LEFT ARGUMENT',
 '∇recursion','&Spawn',' ','¯NEGATIVE','⍬EMPTY NUMERIC VECTOR']
 ,bqk=' =1234567890-qwertyuiop\\asdfghjk∙l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/∙/g,'')
-,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰⍵⍷⍷⍨↑↓⍸⍥⍣⊣⍺⌈⌊_⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
+,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰W⍷⍷⍨YU⍸⍥⍣⊣ASDF⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
 ,tc={},bqc={} //tab completions and ` completions
 for(let i=0;i<bqk.length;i++)bqc[bqk[i]]=bqv[i]
 for(let i=0;i<tcs.length;i+=3)tc[tcs[i]+tcs[i+1]]=tcs[i+2]
