@@ -11,7 +11,7 @@ let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"
 '/replicate\nReduce','\\expand\nScan','⌿replicate first\nReduce First','⍀expand first\nScan First',' ',',enlist\ncatenate/laminate',
 '⍪table\ncatenate first/laminate','⍴shape\nreshape','⌽reverse\nrotate','⊖reverse first\nrotate first',
 '⍉transpose\nreorder axes',' ','¨Each','⍨Selfie\nSwap','⍣Repeat','.Outer Product (∘.)\nInner Product',
-'∘Outer product (∘.)\nCurry\nCompose','⍤Rank','@At',' ','⍞STDIN\nSTDERR','⎕EVALUATED STDIN\nSTDOUT','⍠Variant',
+'∘OUTER PRODUCT (∘.)\nCurry\nCompose','⍤Rank','@At',' ','⍞STDIN\nSTDERR','⎕EVALUATED STDIN\nSTDOUT','⍠Variant',
 '⌸Index Key\nKey\n','⌺Stencil','⌶I-Beam','⍎execute','⍕format',' ','⋄STATEMENT SEPARATOR','⍝COMMENT','→ABORT\nBRANCH','⍵RIGHT ARGUMENT','⍺LEFT ARGUMENT',
 '∇recursion','&Spawn',' ','¯NEGATIVE','⍬EMPTY NUMERIC VECTOR']
 ,bqk=' =1234567890-qwertyuiop\\asdfghjk∙l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/∙/g,'')
