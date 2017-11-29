@@ -2,18 +2,18 @@
 let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"]/g,c=>hc[c]) //html chars and escape fn
 ,tcs='<-←-<←xx×:-÷-:÷*O⍟O*⍟[-⌹-]⌹OO○77⌈FF⌈ll⌊LL⌊|_⊥_|⊥TT⊤-|⊣|-⊢=/≠/=≠<=≤<_≤>=≥>_≥==≡=_≡/_≢_/≢vv∨^^∧^~⍲~^⍲v~⍱~v⍱^|↑|^↑v|↓|v↓((⊂(_⊆_(⊆))⊃[|⌷|]⌷A|⍋|A⍋V|⍒|V⍒ii⍳i_⍸_i⍸ee∊e_⍷_e⍷'+
 'uu∪UU∪nn∩/-⌿-/⌿\\-⍀-\\⍀,-⍪-,⍪rr⍴pp⍴O|⌽|O⌽O-⊖-O⊖O\\⍉\\O⍉::¨~:⍨:~⍨*:⍣:*⍣oo∘o:⍤:o⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎_o⍎oT⍕To⍕<>⋄on⍝no⍝aa⍺ww⍵VV∇--¯0~⍬~0⍬'
-,lbs=['←assign',' ','+conjugate\nplus','-negate\nminus','×direction\ntimes','÷reciprocal\ndivide','*exponential\npower','⍟natural logarithm\logarithm',
+,lbs=['←ASSIGN',' ','+conjugate\nplus','-negate\nminus','×direction\ntimes','÷reciprocal\ndivide','*exponential\npower','⍟natural logarithm\nlogarithm',
 '⌹matrix inverse\nmatrix divide','○pi times\ncircular','!factorial\nbinomial','?roll\ndeal',' ','|magnitude\nresidue',
 '⌈ceiling\nmaximum','⌊floor\nminimum','⊥decode','⊤encode','⊣same\nleft','⊢same\nright',' ','=equal','≠not equal',
 '≤less than or equal to','<less than','>greater than','≥greater than or equal to','≡depth\nmatch','≢tally\nnot match',' ','∨greatest common divisor/or',
 '∧leat common multiple/and','⍲nand','⍱nor',' ','↑mix\ntake','↓split\ndrop','⊂enclose\npartioned enclose','⊃first\npick','⊆nest\npartition\n','⌷index','⍋grade up\ngrade up',
-'⍒grade down\ngrade down','⍳index\nindex of','⍸where\ninterval index','∊enlist\nmembership','⍷find','∪unique\nunion','∩intersection','~not\nwithout',' ',
-'/replicate\nReduce','\\expand\nScan','⌿replicate first\nReduce first','⍀expand first\nScan first',' ',',enlist\ncatenate/laminate',
+'⍒grade down\ngrade down','⍳indices\nindices of','⍸where\ninterval index','∊enlist\nmember of','⍷find','∪unique\nunion','∩intersection','~not\nwithout',' ',
+'/replicate\nReduce','\\expand\nScan','⌿replicate first\nReduce First','⍀expand first\nScan First',' ',',enlist\ncatenate/laminate',
 '⍪table\ncatenate first/laminate','⍴shape\nreshape','⌽reverse\nrotate','⊖reverse first\nrotate first',
-'⍉transpose\nreorder axes',' ','¨Each','⍨Selfie\nSwap','⍣Repeat','.nInner product\nOuter product (∘.)',
-'∘Curry\nCompose\nOuter product (∘.)','⍤Rank','@At',' ','⍞stdin\nstderr','⎕eval\'ed stdin\nstdout','⍠Variant',
-'⌸Index key\nKey\n','⌺Stencil','⌶I-beam','⍎execute','⍕format',' ','⋄statement separator','⍝comment','→abort\nbranch','⍵right argument','⍺left argument',
-'∇recursion','&Spawn',' ','¯negative','⍬empty numeric vector']
+'⍉transpose\nreorder axes',' ','¨Each','⍨Selfie\nSwap','⍣Repeat','.nInner Product\nOuter Product (∘.)',
+'∘Curry\nCompose\nOuter product (∘.)','⍤Rank','@At',' ','⍞STDIN\nSTDERR','⎕EVALUATED STDIN\nSTDOUT','⍠Variant',
+'⌸Index Key\nKey\n','⌺Stencil','⌶I-beam','⍎execute','⍕format',' ','⋄STATEMENT SEPARATOR','⍝COMMENT','→ABORT\nBRANCH','⍵RIGHT ARGUMENT','⍺LEFT ARGUMENT',
+'∇recursion','&Spawn',' ','¯NEGATIVE','⍬EMPTY NUMERIC VECTOR']
 ,bqk=' =1234567890-qwertyuiop\\asdfghjk∙l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/∙/g,'')
 ,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰⍵⍷⍷⍨↑↓⍸⍥⍣⊣⍺⌈⌊_⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
 ,tc={},bqc={} //tab completions and ` completions
@@ -33,7 +33,7 @@ let d=document,el=d.createElement('div');el.innerHTML=
  </style>
  <style>
   body{padding-top:24px!important}
-  .ngn_lb{position:fixed;top:0;left:0;right:0;line-height:24px;background-color:buttonface;color:#000;
+  .ngn_lb{position:fixed;top:0;left:0;right:0;padding:0 4px;line-height:24px;background-color:buttonface;color:#000;
     cursor:default;font-family:"APL385 Unicode","DejaVu Sans Mono",monospace;
     border-bottom:solid buttonshadow 1px;z-index:2147483647}
   .ngn_lb b{cursor:pointer;padding:0 1px;font-weight:normal}
