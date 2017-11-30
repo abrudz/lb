@@ -35,7 +35,7 @@ let d=document,el=d.createElement('div');el.innerHTML=
     font-family:"Apl385 Unicode",monospace;border-bottom:solid #999 1px;padding:2px 2px 0 2px;word-wrap:break-word;}
   .ngn_lb b{cursor:pointer;padding:0 1px;font-weight:normal}
   .ngn_lb b:hover,.ngn_bq .ngn_lb{background-color:#777;color:#fff}
-  .ngn_x{float:right;color:#999;cursor:pointer}
+  .ngn_x{float:right;color:#999;cursor:pointer;margin-top:-3px}
   .ngn_x:hover{color:#f00}
  </style>`
 d.body.appendChild(el)
