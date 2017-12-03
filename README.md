@@ -12,4 +12,4 @@ Adapted from [github.com/ngn/apl/tree/master/web](https://github.com/ngn/apl/tre
 
 **05AB1E:** [abrudz.github.io/lb/05ab1e](https://abrudz.github.io/lb/05ab1e)
 
-**Actually:** [abrudz.github.io/lb/05ab1e](https://abrudz.github.io/lb/actually)
+**Actually:** [abrudz.github.io/lb/actually](https://abrudz.github.io/lb/actually)
