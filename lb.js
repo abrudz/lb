@@ -29,7 +29,7 @@ let lbh='';for(let i=0;i<lbs.length;i++){
 }
 let d=document,el=d.createElement('div');el.innerHTML=
 `<div class=ngn_lb><span class=ngn_x title=Close>❎</span>${lbh}</div>
- <style>@font-face{font-family:"Apl385 Unicode";src:url(Apl385.woff)format('woff');}</style>
+ <style>@font-face{font-family:"APL385 Unicode";src:local("APL385 Unicode"),url(Apl385.woff)format('woff');}</style>
  <style>
   .ngn_lb{position:fixed;top:0;left:0;right:0;background-color:#eee;color:#000;cursor:default;z-index:2147483647;
     font-family:"Apl385 Unicode",monospace;border-bottom:solid #999 1px;padding:2px 2px 0 2px;word-wrap:break-word;}
