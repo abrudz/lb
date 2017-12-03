@@ -1,7 +1,13 @@
-## APL language bar, key-bindings, and character compositions
+## Language bars, key-bindings, and character compositions
 
-This provides three ways to easily enter APL characters into pretty much any input field on any webpage:
+This provides up to three ways to easily enter the special characters of a programming language into pretty much any input field on any webpage.
 
 Adapted from [github.com/ngn/apl/tree/master/web](https://github.com/ngn/apl/tree/master/web).
 
-Go to [abrudz.github.io/lb](https://abrudz.github.io/lb/) for more information and for usage instructions.
+### Information and usage instructions
+
+**APL:** [abrudz.github.io/lb](https://abrudz.github.io/lb/)
+
+**Jelly:** [abrudz.github.io/lb/jelly](https://abrudz.github.io/lb/jelly)
+
+**05AB1E:** [abrudz.github.io/lb/05ab1e](https://abrudz.github.io/lb/05ab1e)
