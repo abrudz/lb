@@ -2,7 +2,7 @@
 
 This provides up to three ways to easily enter the special characters of a programming language into pretty much any input field on any webpage.
 
-Adapted from [github.com/ngn/apl/tree/master/web](https://github.com/ngn/apl/tree/master/web).
+Adapted from [github.com/ngn/apl/tree/master/web](https://github.com/ngn/apl/tree/master/web), where all credit should go.
 
 ### Information and usage instructions
 
