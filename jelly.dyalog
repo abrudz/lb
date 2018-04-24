@@ -1,4 +1,4 @@
-﻿ (comp all)←comp Build(atoms quicks syntax);i;atomsOut;type;t;now;duals;n;all;where;remaining;Tr;Split;dq;Format
+﻿ (tcs lbs)←comp Build(atoms quicks syntax);i;atomsOut;type;t;now;duals;n;all;where;remaining;Tr;Split;dq;Format
 ⍝ ⍺ is https://gist.github.com/cairdcoinheringaahing/b24ab7802c5979ab9ce398fedb811795
 ⍝ ⍵ is https://github.com/DennisMitchell/jelly/wiki/Atoms ./Quicks ./Syntax
  t n←⎕UCS 9 10 ⍝ tab newline
@@ -58,3 +58,5 @@
  duals←∪⊃¨duals                                                                  ⍝ prefixes
  duals{⍺ ⍺ n,'SYNTAX',n,'Begins two-byte ',⍵,'.'}¨←((≢1↓duals)⍴⊂'atom'),⊂'Quick' ⍝ construct
  all,←(⊂Format⊃syntax),duals                                                     ⍝ format
+
+ (tcs lbs)←comp all

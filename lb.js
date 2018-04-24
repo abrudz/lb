@@ -25,11 +25,11 @@ let lbh='';for(let i=0;i<lbs.length;i++){
   let ks=[]
   for(let j=0;j<tcs.length;j+=3)if(lbs[i][0]===tcs[j+2])ks.push('\n'+tcs[j]+' '+tcs[j+1]+' <tab>')
   for(let j=0;j<bqk.length;j++)if(lbs[i][0]===bqv[j])ks.push('\n` '+bqk[j])
-  lbh+='<b title="'+he(lbs[i].slice(1))+(ks.length?'\n'+ks.join(''):'')+'">'+lbs[i][0]+'</b>'
+  lbh+='<b title="'+he(lbs[i].slice(1)+(ks.length?'\n'+ks.join(''):''))+'">'+lbs[i][0]+'</b>'
 }
 let d=document,el=d.createElement('div');el.innerHTML=
 `<div class=ngn_lb><span class=ngn_x title=Close>❎</span>${lbh}</div>
- <style>@font-face{font-family:"APL385 Unicode";src:local("APL385 Unicode"),url(Apl385.woff)format('woff');}</style>
+ <style>@font-face{font-family:"APL385 Unicode";src:local("APL385 Unicode"),url(//abrudz.github.io/lb/Apl385.woff)format('woff');}</style>
  <style>
   .ngn_lb{position:fixed;top:0;left:0;right:0;background-color:#eee;color:#000;cursor:default;z-index:2147483647;
     font-family:"Apl385 Unicode",monospace;border-bottom:solid #999 1px;padding:2px 2px 0 2px;word-wrap:break-word;}

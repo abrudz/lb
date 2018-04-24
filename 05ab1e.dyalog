@@ -1,4 +1,4 @@
-﻿ info←Build info;i;where;t;dual;prefixed;main
+﻿ lbs←Build info;i;where;t;dual;prefixed;main
 ⍝ ⍵ is https://github.com/Adriandmen/05AB1E/blob/master/docs/info.txt
  t←⎕UCS 9 ⍝ tab
 
@@ -29,4 +29,4 @@
  info←(⊃(⊣,t t,1↓⊢)/)¨info ⍝ merge them
  info,←'.ž',¨2↓¨1⌷dual     ⍝ append leftover duals
  info←'\t *$'⎕R''⊢info     ⍝ trim whitespace
- info←'\t'⎕R'\n'¨info      ⍝ convert tabs to newlines
+ lbs←'\t'⎕R'\n'¨info      ⍝ convert tabs to newlines
