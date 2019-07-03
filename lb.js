@@ -1,7 +1,7 @@
-﻿;(_=>{
+;(_=>{
 let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"]/g,c=>hc[c]) //html chars and escape fn
-,tcs='<-←xx×/\\×:-÷*O⍟[-⌹-]⌹OO○77⌈FF⌈ll⌊LL⌊|_⊥TT⊤-|⊣|-⊢=/≠L-≠<=≤<_≤>=≥>_≥==≡=_≡/_≢L=≢vv∨^^∧^~⍲v~⍱^|↑v|↓((⊂cc⊂(_⊆c_⊆))⊃[|⌷|]⌷A|⍋V|⍒ii⍳i_⍸ee∊e_⍷'+
-'uu∪UU∪nn∩/-⌿\\-⍀,-⍪rr⍴pp⍴O|⌽O-⊖O\\⍉::¨""¨~:⍨~"⍨*:⍣*"⍣oo∘o:⍤o"⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎oT⍕o-⍕<>⋄on⍝->→aa⍺ww⍵VV∇--¯0~⍬'+
+,tcs='<-←xx×/\\×:-÷*O⍟[-⌹-]⌹OO○77⌈FF⌈ll⌊LL⌊T_⌶II⌶|_⊥TT⊤-|⊣|-⊢=/≠L-≠<=≤<_≤>=≥>_≥==≡=_≡7=≢L=≢vv∨^^∧^~⍲v~⍱^|↑v|↓((⊂cc⊂(_⊆c_⊆))⊃[|⌷|]⌷A|⍋V|⍒ii⍳i_⍸ee∊e_⍷'+
+'uu∪UU∪nn∩/-⌿\\-⍀,-⍪rr⍴pp⍴O|⌽O-⊖O\\⍉::¨""¨~:⍨~"⍨*:⍣*"⍣oo∘o:⍤o"⍤[\'⍞\']⍞[]⎕[:⍠:]⍠[=⌸=]⌸[<⌺>]⌺o_⍎oT⍕o-⍕<>⋄^v⋄on⍝->→aa⍺ww⍵VV∇--¯0~⍬'+
 '^-∆^=⍙[?⍰?]⍰:V⍢∇"⍢||∥ox¤)_⊇_)⊇O:⍥O"⍥V~⍫\'\'`'
 ,lbs=['←←\nASSIGN',' ','++\nconjugate\nplus','--\nnegate\nminus','××\ndirection\ntimes','÷÷\nreciprocal\ndivide','**\nexponential\npower','⍟⍟\nnatural logarithm\nlogarithm',
 '⌹⌹\nmatrix inverse\nmatrix divide','○○\npi times\ncircular','!!\nfactorial\nbinomial','??\nroll\ndeal',' ','||\nmagnitude\nresidue',
@@ -9,14 +9,14 @@ let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"
 '≤≤\nless than or equal to','<<\nless than','>>\ngreater than','≥≥\ngreater than or equal to','≡≡\ndepth\nmatch','≢≢\ntally\nnot match',' ','∨∨\ngreatest common divisor/or',
 '∧∧\nlowest common multiple/and','⍲⍲\nnand','⍱⍱\nnor',' ','↑↑\nmix\ntake','↓↓\nsplit\ndrop','⊂⊂\nenclose\npartioned enclose','⊃⊃\nfirst\npick','⊆⊆\nnest\npartition\n','⌷⌷\nindex','⍋⍋\ngrade up\ngrade up',
 '⍒⍒\ngrade down\ngrade down',' ','⍳⍳\nindices\nindices of','⍸⍸\nwhere\ninterval index','∊∊\nenlist\nmember of','⍷⍷\nfind','∪∪\nunique\nunion','∩∩\nintersection','~~\nnot\nwithout',' ',
-'//\nreplicate\nReduce','\\\n\expand\nScan','⌿⌿\nreplicate first\nReduce First','⍀⍀\nexpand first\nScan First',' ',',,\nenlist\ncatenate/laminate',
+'//\nreplicate\nReduce','\\\\\n\expand\nScan','⌿⌿\nreplicate first\nReduce First','⍀⍀\nexpand first\nScan First',' ',',,\nenlist\ncatenate/laminate',
 '⍪⍪\ntable\ncatenate first/laminate','⍴⍴\nshape\nreshape','⌽⌽\nreverse\nrotate','⊖⊖\nreverse first\nrotate first',
 '⍉⍉\ntranspose\nreorder axes',' ','¨¨\nEach','⍨⍨\nSelfie\nSwap','⍣⍣\nRepeat','..\nOuter Product (∘.)\nInner Product',
 '∘∘\nOUTER PRODUCT (∘.)\nCurry\nCompose','⍤⍤\nRank','@@\nAt',' ','⍞⍞\nSTDIN\nSTDERR','⎕⎕\nEVALUATED STDIN\nSTDOUT','⍠⍠\nVariant',
-'⌸⌸\nIndex Key\nKey\n','⌺⌺\nStencil','⌶⌶\nI-Beam','⍎⍎\nexecute','⍕⍕\nformat',' ','⋄⋄\nSTATEMENT SEPARATOR','⍝⍝\nCOMMENT','→→\nABORT\nBRANCH','⍵⍵\nRIGHT ARGUMENT','⍺⍺\nLEFT ARGUMENT',
-'∇∇\nrecursion','&&\nSpawn',' ','¯¯\nNEGATIVE','⍬⍬\nEMPTY NUMERIC VECTOR','∆∆\nIDENTIFIER CHARACTER','⍙⍙\nIDENTIFIER CHARACTER']
+'⌸⌸\nIndex Key\nKey\n','⌺⌺\nStencil','⌶⌶\nI-Beam','⍎⍎\nexecute','⍕⍕\nformat',' ','⋄⋄\nSTATEMENT SEPARATOR','⍝⍝\nCOMMENT','→→\nABORT\nBRANCH','⍵⍵\nRIGHT ARGUMENT\nRIGHT OPERAND (⍵⍵)','⍺⍺\nLEFT ARGUMENT\nLEFT OPERAND (⍺⍺)',
+'∇∇\nrecursion\nRecursion (∇∇)','&&\nSpawn',' ','¯¯\nNEGATIVE','⍬⍬\nEMPTY NUMERIC VECTOR','∆∆\nIDENTIFIER CHARACTER','⍙⍙\nIDENTIFIER CHARACTER']
 ,bqk=' =1234567890-qwertyuiop\\asdfghjk∙l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/∙/g,'')
-,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰W⍷⍷⍨YU⍸⍥⍣⊣ASDF⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
+,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰W⍷R⍨YU⍸⍥⍣⊣ASDF⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
 ,tc={},bqc={} //tab completions and ` completions
 for(let i=0;i<bqk.length;i++)bqc[bqk[i]]=bqv[i]
 for(let i=0;i<tcs.length;i+=3)tc[tcs[i]+tcs[i+1]]=tcs[i+2]
@@ -54,11 +54,13 @@ let fk=x=>{
   let t=x.target
   if(bqm){let i=t.selectionStart,v=t.value,c=bqc[x.key];if(x.which>31){bqm=0;d.body.classList.remove('ngn_bq')}
           if(c){t.value=v.slice(0,i)+c+v.slice(i);t.selectionStart=t.selectionEnd=i+1;pd(x);return!1}}
-  switch(x.ctrlKey+2*x.shiftKey+4*x.altKey+8*x.metaKey+100*x.which){
-    case 19200:bqm=1;d.body.classList.add('ngn_bq');pd(x);break //`
-    case   900:{let i=t.selectionStart,v=t.value,c=tc[v.slice(i-2,i)] //tab
-                if(c){t.value=v.slice(0,i-2)+c+v.slice(i);t.selectionStart=t.selectionEnd=i-1;pd(x)}
-                break}
+  if (!x.ctrlKey && !x.shiftKey && !x.altKey && !x.metaKey) {
+    if ("`½²^º§ùµ°".indexOf(x.key) > -1) {
+      bqm=1;d.body.classList.add('ngn_bq');pd(x); // ` or other trigger symbol pressed, wait for next key
+    } else if (x.key == "Tab") {
+      let i=t.selectionStart,v=t.value,c=tc[v.slice(i-2,i)]
+      if(c){t.value=v.slice(0,i-2)+c+v.slice(i);t.selectionStart=t.selectionEnd=i-1;pd(x)}
+    }
   }
 }
 let ff=x=>{

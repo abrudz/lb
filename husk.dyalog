@@ -8,7 +8,7 @@
 
  commands⌿⍨←~commands[;1]≡¨⊂'0-9 ' ⍝ remove digits' row
 
- nums←⍪'Nu' 'On' 'Tw' 'Th' 'Fo' 'Fi' 'Si' 'Se' 'Ei' 'Ni' ⍝ digit names
+ nums←⍪'Nul' 'One' 'Two' 'Thr' 'Fou' 'Fiv' 'Six' 'Sev' 'Eig' 'Nin' ⍝ digit names
 
  ins←commands[;1]⍳⊂'⁰-⁹ '                                ⍝ find superscripts
  table←'⁰¹²³⁴⁵⁶⁷⁸⁹',nums,⍤1⊢¯2 0 ¯1↓¨commands[ins;3 4 5] ⍝ construct table
