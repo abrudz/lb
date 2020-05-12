@@ -7,13 +7,13 @@ let hc={'<':'&lt;','&':'&amp;',"'":'&apos;','"':'&quot;'},he=x=>x.replace(/[<&'"
 '⌹⌹\nmatrix inverse\nmatrix divide','○○\npi times\ncircular','!!\nfactorial\nbinomial','??\nroll\ndeal',' ','||\nmagnitude\nresidue',
 '⌈⌈\nceiling\nmaximum','⌊⌊\nfloor\nminimum','⊥⊥\ndecode','⊤⊤\nencode','⊣⊣\nsame\nleft','⊢⊢\nsame\nright',' ','==\nequal','≠≠\nnot equal',
 '≤≤\nless than or equal to','<<\nless than','>>\ngreater than','≥≥\ngreater than or equal to','≡≡\ndepth\nmatch','≢≢\ntally\nnot match',' ','∨∨\ngreatest common divisor/or',
-'∧∧\nlowest common multiple/and','⍲⍲\nnand','⍱⍱\nnor',' ','↑↑\nmix\ntake','↓↓\nsplit\ndrop','⊂⊂\nenclose\npartioned enclose','⊃⊃\nfirst\npick','⊆⊆\nnest\npartition\n','⌷⌷\nindex','⍋⍋\ngrade up\ngrade up',
+'∧∧\nlowest common multiple/and','⍲⍲\nnand','⍱⍱\nnor',' ','↑↑\nmix\ntake','↓↓\nsplit\ndrop','⊂⊂\nenclose\npartioned enclose','⊃⊃\nfirst\npick','⊆⊆\nnest\npartition','⌷⌷\nindex','⍋⍋\ngrade up\ngrade up',
 '⍒⍒\ngrade down\ngrade down',' ','⍳⍳\nindices\nindices of','⍸⍸\nwhere\ninterval index','∊∊\nenlist\nmember of','⍷⍷\nfind','∪∪\nunique\nunion','∩∩\nintersection','~~\nnot\nwithout',' ',
 '//\nreplicate\nReduce','\\\\\n\expand\nScan','⌿⌿\nreplicate first\nReduce First','⍀⍀\nexpand first\nScan First',' ',',,\nenlist\ncatenate/laminate',
 '⍪⍪\ntable\ncatenate first/laminate','⍴⍴\nshape\nreshape','⌽⌽\nreverse\nrotate','⊖⊖\nreverse first\nrotate first',
 '⍉⍉\ntranspose\nreorder axes',' ','¨¨\nEach','⍨⍨\nSelfie\nSwap','⍣⍣\nRepeat','..\nOuter Product (∘.)\nInner Product',
 '∘∘\nOUTER PRODUCT (∘.)\nCurry\nCompose','⍤⍤\nRank','@@\nAt',' ','⍞⍞\nSTDIN\nSTDERR','⎕⎕\nEVALUATED STDIN\nSTDOUT','⍠⍠\nVariant',
-'⌸⌸\nIndex Key\nKey\n','⌺⌺\nStencil','⌶⌶\nI-Beam','⍎⍎\nexecute','⍕⍕\nformat',' ','⋄⋄\nSTATEMENT SEPARATOR','⍝⍝\nCOMMENT','→→\nABORT\nBRANCH','⍵⍵\nRIGHT ARGUMENT\nRIGHT OPERAND (⍵⍵)','⍺⍺\nLEFT ARGUMENT\nLEFT OPERAND (⍺⍺)',
+'⌸⌸\nIndex Key\nKey','⌺⌺\nStencil','⌶⌶\nI-Beam','⍎⍎\nexecute','⍕⍕\nformat',' ','⋄⋄\nSTATEMENT SEPARATOR','⍝⍝\nCOMMENT','→→\nABORT\nBRANCH','⍵⍵\nRIGHT ARGUMENT\nRIGHT OPERAND (⍵⍵)','⍺⍺\nLEFT ARGUMENT\nLEFT OPERAND (⍺⍺)',
 '∇∇\nrecursion\nRecursion (∇∇)','&&\nSpawn',' ','¯¯\nNEGATIVE','⍬⍬\nEMPTY NUMERIC VECTOR','∆∆\nIDENTIFIER CHARACTER','⍙⍙\nIDENTIFIER CHARACTER']
 ,bqk=' =1234567890-qwertyuiop\\asdfghjk∙l;\'zxcvbnm,./`[]+!@#$%^&*()_QWERTYUIOP|ASDFGHJKL:"ZXCVBNM<>?~{}'.replace(/∙/g,'')
 ,bqv='`÷¨¯<≤=≥>≠∨∧×?⍵∊⍴~↑↓⍳○*⊢∙⍺⌈⌊_∇∆∘\'⎕⍎⍕∙⊂⊃∩∪⊥⊤|⍝⍀⌿⋄←→⌹⌶⍫⍒⍋⌽⍉⊖⍟⍱⍲!⍰W⍷R⍨YU⍸⍥⍣⊣ASDF⍢H⍤⌸⌷≡≢⊆⊇CVB¤∥⍪⍙⍠⌺⍞⍬'.replace(/∙/g,'')
