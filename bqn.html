@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset=utf-8>
+	<title>BQN</title>
+	<style>
+		kbd {
+			border: 1px solid buttonshadow;
+			border-radius: .5ex;
+			padding: 0 .25ex;
+			margin: 0 .2ex;
+			background: buttonface;
+		}
+	</style>
+</head>
+
+<body>
+	<article>
+		<h1>
+			<a href="https://mlochbaum.github.io/BQN">BQN</a> language bar, key-bindings, and character compositions
+			<a href="."><button>Other languages</button></a>
+		</h1>
+		<p>This provides two ways to easily enter BQN characters into pretty much any input field on any webpage:</p>
+		<ol>
+			<li>Use backslash <kbd>\</kbd> as prefix BQN key, e.g. <kbd>\</kbd><kbd>G</kbd> gives <code>𝔾</code>.</li>
+			<li>Click on symbols in the language bar.</li>
+		</ol>
+		<p>Try it here: <input style="font-family:'BQN386 Unicode',monospace;" autofocus /></p>
+		<p>Hover over a symbol in the language bar for keybindings.</p>
+		<h2>Installation</h2>
+		<h3>Desktop browser</h3>
+		<ol>
+			<li>Drag this link to your bookmarks bar: <a
+					href='javascript:(d=>{let e=d.createElement("script");e.src="https://abrudz.github.io/lb/bqn.js";d.body.appendChild(e)})(document)'>BQN</a>
+			</li>
+		</ol>
+		<h3>Mobile browser</h3>
+		<ol>
+			<li>Add a bookmark for this page.</li>
+			<li>Edit the bookmark's target URL address to
+				<code>javascript:(d=&gt;{let%20e=d.createElement("script");e.src="https://abrudz.github.io/lb/bqn.js";d.body.appendChild(e)})(document)</code>
+			</li>
+		</ol>
+		<h3>Webpage</h3>
+		<ol>
+			<li>Include this HTML in your page:
+				<code>&lt;script src="https://abrudz.github.io/lb/bqn.js">&lt;/script></code></li>
+		</ol>
+		<h2>Activation</h2>
+		<ol>
+			<li>Navigate to the web page where you want to enter BQN characters.</li>
+			<li>Click on the <em>BQN</em> bookmark. The language bar should appear at the web page's top.</li>
+		</ol>
+	</article>
+	<script src="bqn.js"></script>
+</body>
+
+</html>
