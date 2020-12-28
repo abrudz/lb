@@ -2,7 +2,7 @@
 <a href="https://abrudz.github.io/lb/05ab1e"><kbd>05AB1E</kbd></a>
 <a href="https://abrudz.github.io/lb/actually"><kbd>Actually</kbd></a>
 <a href="https://abrudz.github.io/lb/apl"><kbd>APL</kbd></a>
-<a href="https://abrudz.github.io/lb/bqn"><button>BQN</button></a>
+<a href="https://abrudz.github.io/lb/bqn"><kbd>BQN</kbd></a>
 <a href="https://abrudz.github.io/lb/brachylog"><kbd>Brachylog</kbd></a>
 <a href="https://abrudz.github.io/lb/husk"><kbd>Husk</button></a>
 <a href="https://abrudz.github.io/lb/jelly"><kbd>Jelly</kbd></a>
