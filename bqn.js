@@ -2,8 +2,8 @@
 	let hc = { '<': '&lt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }, he = x => x.replace(/[<&'"]/g, c => hc[c]) //html chars and escape fn
 		, tcs = ''
 		, lbs = ['+Conjugate\nAdd', '-Negate\nSubtract', '×Sign\nMultiply', '÷Reciprocal\nDivide', '⋆Exponential\nPower', '√Square Root\nRoot', '⌊Floor\nMinimum', '⌈Ceiling\nMaximum', '∧Sort Up\nAnd', '∨Sort Down\nOr', '¬Not\nSpan', '|Absolute Value\nModulus', '≤Less Than or Equal to', '<Enclose\nLess Than', '>Merge\nGreater Than', '≥Greater Than or Equal to', '=Rank\nEquals', '≠Length\nNot Equals', '≡Depth\nMatch', '≢Shape\nNot Match', '⊣Identity\nLeft', '⊢Identity\nRight', '⥊Deshape\nReshape', '∾Join\nJoin to', '≍Solo\nCouple', '↑Prefixes\nTake', '↓Suffixes\nDrop', '↕Range\nWindows', '«Shift Before', '»Shift After', '⌽Reverse\nRotate', '⍉Transpose\nReorder axes', '/Indices\nReplicate', '⍋Grade Up\nBins Up', '⍒Grade Down\nBins Down', '⊏First Cell\nSelect', '⊑First\nPick', '⊐Index of', '⊒Occurrence Count\nProgressive Index of', '∊Unique Mask\nMember of', '⍷Deduplicate\nFind', '⊔Group Indices\nGroup', '!Assert\nAssert with message', '˙Constant', '˜Self/Swap', '∘Atop', '○Over', '⊸Before/Bind', '⟜After/Bind', '⌾Under', '⊘Valences', '◶Choose', '⎉Rank', '˘Cells', '⚇Depth', '¨Each', '⌜Table', '⍟Repeat', '⁼Undo', '´Fold', '˝Insert', '`Scan', '←Define', '⇐Export', '↩Change', '→Return', '⋄Separator', ',Separator', '(Begin expression', ')End expression', '{Begin block', '}End block', '⟨Begin list', '⟩End list', '‿Strand', '·Nothing', '•System', '𝕨Left argument', '𝕎Left argument (as function)', '𝕩Right argument', '𝕏Right argument (as function)', '𝕗Modifier left operand (as subject)', '𝔽Modifier left operand', '𝕘2-modifier right operand (as subject)', '𝔾2-modifier right operand', '𝕤Current function (as subject)', '𝕊Current function', '𝕣Current modifier', '¯Minus', 'πPi', '∞Infinity', '@Null character', '#Comment']
-		, bqk = Array.from('`123456890-=~!@#$%^&*()_+qwertuiop[]QWERTIOP{}asdfghjkl;ASFGHKL:"zxcvbm,./XVBM<>? \'')
-		, bqv = Array.from('˜˘¨⁼⌜´˝∞¯•÷×¬⎉⚇⍟◶⊘⎊⍎⍕⟨⟩√⋆⌽𝕨∊↑∧⊔⊏⊐π←→↙𝕎⍷𝕣⍋⊑⊒⍳⊣⊢⍉𝕤↕𝕗𝕘⊸∘○⟜⋄↖𝕊𝔽𝔾«⌾»·˙⥊𝕩↓∨⌊≡∾≍≠𝕏⍒⌈≢≤≥⇐‿↩')
+		, bqk = '`123456890-=~!@#$%^&*()_+qwertuiop[]QWERTIOP{}asdfghjkl;ASFGHKL:"zxcvbm,./XVBM<>? \''
+		, bqv = '˜˘¨⁼⌜´˝∞¯•÷×¬⎉⚇⍟◶⊘⎊⍎⍕⟨⟩√⋆⌽𝕨∊↑∧⊔⊏⊐π←→↙𝕎⍷𝕣⍋⊑⊒⍳⊣⊢⍉𝕤↕𝕗𝕘⊸∘○⟜⋄↖𝕊𝔽𝔾«⌾»·˙⥊𝕩↓∨⌊≡∾≍≠𝕏⍒⌈≢≤≥⇐‿↩'.replace(/[\u00A0-\u9999<>\&]/g, function (i) { return '&#' + i.charCodeAt(0) + ';'; })
 		, tc = {}, bqc = {} //tab completions and ` completions
 	for (let i = 0; i < bqk.length; i++)bqc[bqk[i]] = bqv[i]
 	for (let i = 0; i < tcs.length; i += 3)tc[tcs[i] + tcs[i + 1]] = tcs[i + 2]
@@ -12,7 +12,7 @@
 		let ks = []
 		for (let j = 0; j < tcs.length; j += 3)if (lbs[i][0] === tcs[j + 2]) ks.push('\n' + tcs[j] + ' ' + tcs[j + 1] + ' <tab>')
 		for (let j = 0; j < bqk.length; j++)if (lbs[i][0] === bqv[j]) ks.push('\n` ' + bqk[j])
-		lbh += '<b title="' + he(lbs[i].slice(1) + (ks.length ? '\n' + ks.join('') : '')) + '">' + lbs[i][0] + '</b>'
+		lbh += '<b title="' + he(Array.from(lbs[i]).slice(1).join('') + (ks.length ? '\n' + ks.join('') : '')) + '">' + Array.from(lbs[i])[0] + '</b>'
 	}
 	let d = document, el = d.createElement('div'); el.innerHTML =
 		`<div class=ngn_lb><span class=ngn_x title=Close>❎</span>${lbh}</div>
