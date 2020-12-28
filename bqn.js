@@ -11,7 +11,7 @@
 	let lbh = ''; for (let i = 0; i < lbs.length; i++) {
 		let ks = []
 		for (let j = 0; j < tcs.length; j += 3)if (lbs[i][0] === tcs[j + 2]) ks.push('\n' + tcs[j] + ' ' + tcs[j + 1] + ' <tab>')
-		for (let j = 0; j < bqk.length; j++)if (lbs[i][0] === bqv[j]) ks.push('\n` ' + bqk[j])
+		for (let j = 0; j < bqk.length; j++)if (lbs[i][0] === bqv[j]) ks.push('\n\\ ' + bqk[j])
 		lbh += '<b title="' + he(Array.from(lbs[i]).slice(1).join('') + (ks.length ? '\n' + ks.join('') : '')) + '">' + Array.from(lbs[i])[0] + '</b>'
 	}
 	let d = document, el = d.createElement('div'); el.innerHTML =
@@ -44,7 +44,7 @@
 			if (c) { t.value = v.slice(0, i) + c + v.slice(i); t.selectionStart = t.selectionEnd = i + c.length; pd(x); return !1 }
 		}
 		if (!x.ctrlKey && !x.shiftKey && !x.altKey && !x.metaKey) {
-			if ("`½²^º§ùµ°".indexOf(x.key) > -1) {
+			if ("\\½²^º§ùµ°".indexOf(x.key) > -1) {
 				bqm = 1; d.body.classList.add('ngn_bq'); pd(x); // ` or other trigger symbol pressed, wait for next key
 			} else if (x.key == "Tab") {
 				let i = t.selectionStart, v = t.value, c = tc[v.slice(i - 2, i)]
