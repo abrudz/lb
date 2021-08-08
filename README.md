@@ -6,6 +6,7 @@
 <a href="https://abrudz.github.io/lb/brachylog"><kbd>Brachylog</kbd></a>
 <a href="https://abrudz.github.io/lb/husk"><kbd>Husk</button></a>
 <a href="https://abrudz.github.io/lb/jelly"><kbd>Jelly</kbd></a>
+<a href="https://abrudz.github.io/lb/vyxal"><kbd>Vyxal</kbd></a>
 
 This provides up to three ways to easily enter the special characters of a programming language into pretty much any input field on any webpage.
 
