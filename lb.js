@@ -9,7 +9,7 @@
 			'≤≤\nless than or equal to', '<<\nless than', '>>\ngreater than', '≥≥\ngreater than or equal to', '≡≡\ndepth\nmatch', '≢≢\ntally\nnot match', ' ', '∨∨\ngreatest common divisor/or',
 			'∧∧\nlowest common multiple/and', '⍲⍲\nnand', '⍱⍱\nnor', ' ', '↑↑\nmix\ntake', '↓↓\nsplit\ndrop', '⊂⊂\nenclose\npartioned enclose', '⊃⊃\nfirst\npick', '⊆⊆\nnest\npartition', '⌷⌷\nmaterialise\nindex', '⍋⍋\ngrade up\ngrades up',
 			'⍒⍒\ngrade down\ngrades down', ' ', '⍳⍳\nindices\nindices of', '⍸⍸\nwhere\ninterval index', '∊∊\nenlist\nmember of', '⍷⍷\nfind', '∪∪\nunique\nunion', '∩∩\nintersection', '~~\nnot\nwithout', ' ',
-			'//\nreplicate\nReduce', '\\\\\n\expand\nScan', '⌿⌿\nreplicate first\nReduce First', '⍀⍀\nexpand first\nScan First', ' ', ',,\nenlist\ncatenate/laminate',
+			'//\nreplicate\nReduce', '\\\\\n\expand\nScan', '⌿⌿\nreplicate first\nReduce First', '⍀⍀\nexpand first\nScan First', ' ', ',,\nravel\ncatenate/laminate',
 			'⍪⍪\ntable\ncatenate first/laminate', '⍴⍴\nshape\nreshape', '⌽⌽\nreverse\nrotate', '⊖⊖\nreverse first\nrotate first',
 			'⍉⍉\ntranspose\nreorder axes', ' ', '¨¨\nEach', '⍨⍨\nConstant\nSelf\nSwap', '⍣⍣\nRepeat\nUntil', '..\nOuter Product (∘.)\nInner Product',
 			'∘∘\nOUTER PRODUCT (∘.)\nBind\nBeside', '⍤⍤\nRank\nAtop', '⍥⍥\nOver', '@@\nAt', ' ', '⍞⍞\nSTDIN\nSTDERR', '⎕⎕\nEVALUATED STDIN\nSTDOUT\nSYSTEM NAME PREFIX', '⍠⍠\nVariant',
