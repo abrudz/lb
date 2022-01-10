@@ -12,7 +12,7 @@
 		let [k, ...v] = [...lbs[i]]; v = v.join('');
 		let ks = []
 		for (let j = 0; j < tcs.length; j += 3)if (k === tcs[j + 2]) ks.push('\n' + tcs[j] + ' ' + tcs[j + 1] + ' <tab>')
-		for (let j = 0; j < bqk.length; j++)if (k === bqv[j]) ks.push('\n` ' + bqk[j])
+		for (let j = 0; j < bqk.length; j++)if (k === bqv[j]) ks.push('\n\\ ' + bqk[j])
 		lbh += '<b title="' + he(v + (ks.length ? '\n' + ks.join('') : '')) + '">' + k + '</b>'
 	}
 	let d = document, el = d.createElement('div'); el.innerHTML =
